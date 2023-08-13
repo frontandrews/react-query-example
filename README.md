@@ -1,6 +1,6 @@
-# React Query Example Project
+# React Query Example With RestAPI and GraphQL
 
-This project demonstrates the basic usage of `react-query` for data-fetching in a React application. It uses `json-server` as a mock backend to serve data.
+This project demonstrates the basic usage of `react-query` for data-fetching in a React application. It uses `json-server` and graphql server as a mock api backend.
 
 ## Table of Contents
 
@@ -19,8 +19,6 @@ npm install
 To start the project:
 
 npm start
-
-This command concurrently runs the React development server and the `json-server`.
 
 ## Project Structure
 
@@ -41,5 +39,5 @@ The graphql api runs on port `5001`.
 
 ### Scripts
 
-- `start`: Runs both the React development server and `json-server` using `concurrently`.
+- `start`: Runs React, RestAPI and GraphQL servers
 - `server`: Starts the `json-server` using the `db.json` file.
