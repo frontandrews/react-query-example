@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import axios from 'axios';
+import { useQuery } from 'react-query';
+
+function fetchPosts() {
+  // Change the URL to a invalid url to see the error message
+  return axios.get('http://localhost:5000/posts').then(res => res.data);
+}
 
 function App() {
+  const { isLoading, isError, data, error } = useQuery('posts', fetchPosts);
+
+  if (isLoading) {
+    return <span>Loading...</span>;
+  }
+
+  if (isError) {
+    return <span>Error: {error.message}</span>;
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Posts</h1>
+      {data.map(post => (
+        <div key={post.id}>
+          <h3>{post.title}</h3>
+        </div>
+      ))}
     </div>
   );
 }
