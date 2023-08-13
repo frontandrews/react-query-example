@@ -1,10 +1,10 @@
 {
     "posts": [
-        { "id": 1, "title": "Loren" },
-        { "id": 2, "title": "Ipsum" },
-        { "id": 3, "title": "Dolor" },
-        { "id": 4, "title": "Sit" },
-        { "id": 5, "title": "Amet" }
+        { "id": 1, "title": "Rest Loren" },
+        { "id": 2, "title": "Rest Ipsum" },
+        { "id": 3, "title": "Rest Dolor" },
+        { "id": 4, "title": "Rest Sit" },
+        { "id": 5, "title": "Rest Amet" }
     ]
   }
   

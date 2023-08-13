@@ -24,11 +24,13 @@ This command concurrently runs the React development server and the `json-server
 
 ## Project Structure
 
-### JSON Server
+### Server
 
 The database structure for the mock server is found in `db.json`:
 
-The server runs on port `5000`.
+The rest api server runs on port `5000`.
+
+The graphql api runs on port `5001`.
 
 ### React Application
 
